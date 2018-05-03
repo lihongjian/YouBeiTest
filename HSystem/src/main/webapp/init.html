@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>ssssssssssssssssssssssss</title>
+</head>
+
+<body>
+<h1> sssssssssssssssssssssss </h1>
+
+<script>
+    // 现在将字符串"Ow!"转换为base64编码值
+    var str = 'Ow!';
+    // 或去字符串的二进制码
+    var binary = [];
+    for (var i = 0; i < str.length; i++) {
+        // 转换为二进制表示
+        var binStr = str.charCodeAt(i).toString(2);
+        // 将得到的二进制放入数组中得到
+        // ['1001111','1110111','100001']
+        // 因为一个正常的二进制字节都是由8bit组成的,不够8bit的话不表示.上面得到的都不够8bit所以前面我们手动给补0,就得到了
+        // ['01001111','01110111','00100001']
+        binary.push(binStr);
+    }
+
+    // 1 把字符串按照6位分开,进行分割,得到['010011','110111','011100','1000001']
+    // 2 将每一个转换为十进制分别对于[19,55,28,33];
+    // 3 将每一位数字分别对于上面提供的base64对应表,得到对应的编码,分别对于 T 3 c h
+    // 4 最后就会得到base64编码T3ch
+    console.log('字符"Ow!"最后得到的base64编码为"T3ch"');
+</script>
+</body>
+
+
+</html>

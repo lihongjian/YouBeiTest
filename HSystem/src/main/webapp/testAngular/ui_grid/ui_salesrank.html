@@ -1,0 +1,33 @@
+<html  ng-app="salesrank">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../angular/angular.js"></script>
+    <script src="../../angular/angular-animate.js"></script>
+    <script src="../../angular/angular-touch.js"></script>
+    <script src="../../grunt-scripts/csv.js"></script>
+    <script src="../../grunt-scripts/pdfmake.js"></script>
+    <script src="../../grunt-scripts/vfs_fonts.js"></script>
+    <script src="../../angular/uigrid-3.0.7/ui-grid.js"></script>
+    <link rel="stylesheet" href="../../angular/uigrid-3.0.7/ui-grid.css" type="text/css" />
+
+    <script src="salesrank.js"></script>
+</head>
+<body>
+
+<div style="width: 80%;margin:0 auto" ng-controller="salesRankCtrl">
+<div style="height: 90%;border-bottom: solid;border-bottom-color: #000066;margin: 50px 0">
+    <h1>Hello! this is sales rank !</h1>
+</div>
+ <div style="margin: 20px 0">
+     <input type="button" value="七天内">
+     <input type="button" value="三十天内">
+     <input type="button" value="年-月-日 至 年-月-日">
+ </div>
+ <div>
+     <div id="grid1" ui-grid="gridOptions" class="grid"></div>
+ </div>
+</div>
+
+</body>
+</html>

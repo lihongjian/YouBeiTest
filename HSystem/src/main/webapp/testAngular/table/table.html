@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angular原生创建的table</title>
+    <script src="../../angular/angular.js"></script>
+    <script src="tableModule.js"></script>
+</head>
+<body ng-app="tableModule" ng-controller="basicController">
+    <div id="buttonBar" style="height: 10%;padding: 10px">
+        <input type="button" value="AddLine" ng-click="onAddLine(rowdata)">
+        <input type="button" value="DeleteLine" ng-click="onDeleteLine()">
+        <input type="button" value="Edit">
+    </div>
+    <table style="border: solid; height: 90%;">
+        <tr>
+            <th style="width: 150px" ng-repeat="columnDef in columnDefs">{{columnDef.headerName}}</th>
+        </tr>
+        <tr ng-repeat="rowdata in rowCollection track by $index" >
+            <td style="width: 150px"  ng-repeat="columnDef in columnDefs" ng-bind="rowdata[columnDef.field]"></td>
+            <td style="width: 150px">
+                <input type="button" ng-click="onDeleteLine(rowdata)" value="del">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

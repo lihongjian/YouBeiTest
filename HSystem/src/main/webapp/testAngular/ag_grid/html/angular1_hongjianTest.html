@@ -1,0 +1,19 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../../angular/angular.js"></script>
+    <!-- you don't need ignore=notused in your code, this is just here to trick the cache -->
+    <script src="../../../angular/ag_grid/ag-grid.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../angular/ag_grid/ag-grid.css?ignore=notused14">
+    <link rel="stylesheet" type="text/css" href="../../../angular/ag_grid/theme-fresh.css?ignore=notused14">
+    <script src="../js/angular1_hongjianTest.js"></script>
+</head>
+<body ng-app="example" ng-controller="exampleCtrl">
+<div style="height: 5%">
+    <input type="button" value="增行" ng-click="addRow()"/>
+    <input type="button" value="删行" ng-click="deleteRow()"/>
+</div>
+<div ag-grid="gridOptions" class="ag-fresh" style="height: 95%;"></div>
+</body>
+</html>
